@@ -298,7 +298,7 @@ a {
 }
 
 .section-C {
-  padding-top: 15vh;
+  padding-top: 0vh;
   min-height: 100vh;
   background-color: var(--light);
   display: flex;
@@ -320,13 +320,13 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .projects > * {
   background-color: #fff;
-  min-height: 50vh;
-  width: 300px;
+  min-height: 30vh;
+  width: 30vw;
 }
 nav {
   position: fixed;
@@ -512,8 +512,59 @@ nav {
   transition-duration: 0.2s;
   color: rgb(10, 10, 10);
 }
+.project {
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.project:hover {
+  /* animation: project 0.5s ease-in-out infinite; */
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+/* @keyframes project {
+
+  0% {
+    background-color: rgba(124, 71, 117, 0.548);
+  }
+
+  100% {
+    background-color: rgba(117, 31, 117, 0.219);
+    transform: scale(1.1);
+  }
+} */
+
+.project1 {
+  background-image: url("../images/my_sites_images/warriors.png");
+}
+
+.project2 {
+  background-image: url("../images/my_sites_images/smartHouse.png");
+}
+
+.project3 {
+  background-image: url("../images/my_sites_images/teacher.png");
+}
 
 @media screen and (max-width: 1000px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 30px;
+  }
+
+  .projects > * {
+    background-color: #fff;
+    min-height: 30vh;
+    width: 85vw;
+  }
+
   body {
     overflow-x: hidden;
   }

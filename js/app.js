@@ -40,9 +40,12 @@ const app = () =>{
 }
 app();
 
-const onClickResume = () => {
-    const awesome = document.querySelector(".awesome")
-    
+const onClickResume = (name, uri) => {
+    const link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    link.click();
+    const awesome = document.querySelector(".awesome")    
     awesome.textContent="YOU ARE AWESOME!!!";       
 }
 
